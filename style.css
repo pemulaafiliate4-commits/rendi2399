@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #fff0f5;
+    color: #9b526d;
+    overflow-x: hidden;
+}
+
+/* LOCK SCREEN */
+
+.lock-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        145deg,
+        #ffc4d6,
+        #ffe4ed,
+        #f8c6dc
+    );
+    text-align: center;
+    padding: 20px;
+}
+
+.lock-content {
+    width: 100%;
+    max-width: 350px;
+}
+
+.lock-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+#clock {
+    font-size: 65px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 3px 15px #d77c9e;
+}
+
+#date {
+    color: white;
+    margin-bottom: 35px;
+}
+
+.lock-content h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.password-display {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.password-display span {
+    font-size: 25px;
+    color: white;
+}
+
+.password-display span.active {
+    color: #d64d83;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 65px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.keypad button {
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.65);
+    color: #a64f72;
+    font-size: 23px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(180,80,120,0.12);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.keypad button:active {
+    transform: scale(0.85);
+    background: white;
+}
+
+.keypad .empty {
+    visibility: hidden;
+}
+
+#errorMessage {
+    margin-top: 15px;
+    color: #c52f65;
+    font-size: 13px;
+}
+
+.footer-lock {
+    margin-top: 25px;
+    font-size: 12px;
+    color: white;
+}
+
+/* MAIN WEBSITE */
+
+.main-website {
+    width: 100%;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(
+        150deg,
+        #ffd6e5,
+        #fff0f5,
+        #f8c8dd
+    );
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #bd6687;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #bd6687;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.8;
+}
+
+.heart {
+    font-size: 65px;
+    margin: 25px 0;
+    color: #e77da4;
+    animation: heartbeat 1.5s infinite;
+}
+
+.hero button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #e98bad;
+    color: white;
+    font-weight: bold;
+    font-family: inherit;
+    box-shadow: 0 5px 20px #e9a5bd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:active {
+    transform: scale(0.9);
+}
+
+/* GALLERY */
+
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fff5f8;
+}
+
+.gallery-section h2,
+.letter-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #c46e8d;
+    margin-bottom: 15px;
+}
+
+.gallery-section > p {
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+.photo-container {
+    max-width: 750px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.photo-card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(190,100,140,0.15);
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-7px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-card p {
+    padding: 12px 5px 5px;
+    font-size: 13px;
+    color: #c46e8d;
+    font-weight: bold;
+}
+
+/* LETTER */
+
+.letter-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(
+        150deg,
+        #ffe3ed,
+        #fff5f8
+    );
+}
+
+.letter-box {
+    max-width: 450px;
+    margin: 35px auto 0;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(180,90,130,0.12);
+    line-height: 1.9;
+}
+
+.envelope {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.letter-box h3 {
+    font-family: 'Playfair Display', serif;
+    color: #d47798;
+    margin: 15px 0;
+}
+
+.letter-box p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #f7c9da;
+    color: #a85d7c;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* FLOWER ANIMATION */
+
+#flowerContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.flower {
+    position: absolute;
+    top: -40px;
+    font-size: 20px;
+    animation: falling linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-40px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* OTHER ANIMATIONS */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .photo-container {
+        gap: 12px;
+    }
+
+    .photo-card img {
+        height: 170px;
+    }
+
+    .gallery-section h2,
+    .letter-section h2 {
+        font-size: 25px;
+    }
+
+}

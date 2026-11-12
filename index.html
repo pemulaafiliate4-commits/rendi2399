@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOCK SCREEN -->
+    <div id="lockScreen" class="lock-screen">
+
+        <div class="lock-content">
+
+            <div class="lock-icon">🔒</div>
+
+            <h1 id="clock">00:00</h1>
+
+            <p id="date"></p>
+
+            <h3>Welcome, My Princess 💗</h3>
+
+            <p class="subtitle">
+                Masukin password dulu ya cantik 🌷
+            </p>
+
+            <div class="password-display" id="passwordDisplay">
+                <span>○</span>
+                <span>○</span>
+                <span>○</span>
+                <span>○</span>
+            </div>
+
+            <div class="keypad">
+
+                <button onclick="pressNumber('1')">1</button>
+                <button onclick="pressNumber('2')">2</button>
+                <button onclick="pressNumber('3')">3</button>
+
+                <button onclick="pressNumber('4')">4</button>
+                <button onclick="pressNumber('5')">5</button>
+                <button onclick="pressNumber('6')">6</button>
+
+                <button onclick="pressNumber('7')">7</button>
+                <button onclick="pressNumber('8')">8</button>
+                <button onclick="pressNumber('9')">9</button>
+
+                <button class="empty"></button>
+                <button onclick="pressNumber('0')">0</button>
+                <button onclick="deleteNumber()">⌫</button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+            <p class="footer-lock">
+                Made with love ❤️
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- MAIN WEBSITE -->
+    <div id="mainWebsite" class="main-website" style="display:none;">
+
+        <header class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">A SPECIAL GIFT FOR YOU 🌷</p>
+
+                <h1>Hai, My Princess 💗</h1>
+
+                <p>
+                    Ada sesuatu yang pengen aku tunjukin
+                    khusus buat kamu.
+                </p>
+
+                <div class="heart">♡</div>
+
+                <button onclick="showGallery()">
+                    OPEN MY GIFT 🎁
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- GALERI FOTO -->
+        <section id="gallery" class="gallery-section">
+
+            <h2>My Favorite Person 🌸</h2>
+
+            <p>Beberapa foto dari seseorang yang spesial.</p>
+
+            <div class="photo-container">
+
+                <div class="photo-card">
+                    <img src="poto1.jpg" alt="Foto 1">
+                    <p>My favorite girl 💗</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="Poto2.jpg" alt="Foto 2">
+                    <p>So beautiful 🌷</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="poto3.jpg" alt="Foto 3">
+                    <p>My happiness 💕</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="cinta.jpg" alt="Foto 5">
+                    <p>Always special ❤️</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOVE LETTER -->
+        <section class="letter-section">
+
+            <h2>A Little Message For You 💌</h2>
+
+            <div class="letter-box">
+
+                <div class="envelope">💌</div>
+
+                <h3>My Dearest Princess</h3>
+
+                <p>
+                    Terima kasih sudah hadir dalam hidup aku.
+                    Kamu adalah salah satu alasan kenapa
+                    hari-hari aku terasa lebih berwarna.
+                </p>
+
+                <p>
+                    Aku mungkin nggak selalu sempurna,
+                    tapi aku akan selalu berusaha
+                    memberikan yang terbaik.
+                </p>
+
+                <p>
+                    Jangan lupa bahagia terus yaa.
+                    You are special to me. 💗
+                </p>
+
+                <h3>With Love ❤️</h3>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>Made with 💗 just for you</p>
+
+            <p>Forever in my little universe 🌷</p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ANIMASI BUNGA -->
+    <div id="flowerContainer"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
